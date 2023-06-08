@@ -21,21 +21,21 @@ public class lab7 {
         }
         while (scanner.hasNextLine()) {
             String line = scanner.nextLine();
-            cache1.fill(Integer.parseInt(line,16));
-            cache2.fill(Integer.parseInt(line,16));
-            cache3.fill(Integer.parseInt(line,16));
+//            cache1.fill(Integer.parseInt(line,16));
+//            cache2.fill(Integer.parseInt(line,16));
+//            cache3.fill(Integer.parseInt(line,16));
             cache4.fill(Integer.parseInt(line,16));
             cache5.fill(Integer.parseInt(line,16));
             cache6.fill(Integer.parseInt(line,16));
-            cache7.fill(Integer.parseInt(line,16));
+//            cache7.fill(Integer.parseInt(line,16));
         }
-        cache1.getInfo();
-        cache2.getInfo();
-        cache3.getInfo();
+//        cache1.getInfo();
+//        cache2.getInfo();
+//        cache3.getInfo();
         cache4.getInfo();
         cache5.getInfo();
         cache6.getInfo();
-        cache7.getInfo();
+//        cache7.getInfo();
         scanner.close();
     }
 

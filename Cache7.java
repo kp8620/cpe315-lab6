@@ -1,9 +1,9 @@
 
 import java.util.*;
 public class Cache7 {//4KB, direct mapped, 1-word blocks
-    int[] data = new int[4];
-    Integer hit = 0;
-    Integer miss = 0;
+    int[] data = new int[(int)Math.pow(2,10)];
+    int hit = 0;
+    int miss = 0;
     public Cache7()
     {
         Arrays.fill(data,999);
@@ -14,12 +14,11 @@ public class Cache7 {//4KB, direct mapped, 1-word blocks
     }
 
     public void fillCache(int address) {
-        int index = ((address >>> 2) & 0x3FF) & 3;
+        int index = ((address >>> 2) & 0x3FF);
         int tag = (address >>> 12) & 0xFFFFF;
-        if (data[index] != 999)
+        if (data[index] == tag)
         {
             hit++;
-            data[index] = tag;
         }
         else
         {
