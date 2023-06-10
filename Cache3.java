@@ -7,7 +7,9 @@ public class Cache3 {//2KB, direct mapped, 4-word blocks
     int miss = 0;
     public Cache3()
     {
-        Arrays.fill(data,999);
+        for (int i = 0; i < data.length; i++) {
+            data[i] = 0;
+        }
     }
     public void fill(int line)
     {
@@ -31,7 +33,6 @@ public class Cache3 {//2KB, direct mapped, 4-word blocks
     {
         System.out.println("Cache #3");
         System.out.println("Cache size: 2048B\tAssociativity: 1\tBlock size: 4");
-        System.out.printf("Hits: %d\tHit Rate: %.2f%%", hit, (double) hit / ((double) (hit + miss)) * 100);
-        System.out.println("\n---------------------------");
+        System.out.printf("Hits: %d\tHit Rate: %.2f%%%s", hit, (double) hit / ((double) (hit + miss)) * 100,"\n---------------------------\n");
     }
 }

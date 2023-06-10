@@ -1,11 +1,13 @@
 import java.util.Arrays;
 public class Cache1 {// 2KB, direct mapped, 1-word blocks
-    Integer[] data = new Integer[(int)Math.pow(2,9)];
-    Integer hit = 0;
-    Integer miss = 0;
+    int[] data = new int[(int)Math.pow(2,9)];
+    int hit = 0;
+    int miss = 0;
     public Cache1()
     {
-        Arrays.fill(data,999);
+        for (int i = 0; i < data.length; i++) {
+            data[i] = 0;
+        }
     }
     public void fill(int line) {
         fillCache(line);
@@ -28,7 +30,6 @@ public class Cache1 {// 2KB, direct mapped, 1-word blocks
     {
         System.out.println("Cache #1");
         System.out.println("Cache size: 2048B\tAssociativity: 1\tBlock size: 1");
-        System.out.printf("Hits: %d\tHit Rate: %.2f%%", hit, (double) hit / ((double) (hit + miss)) * 100);
-        System.out.println("\n---------------------------");
+        System.out.printf("Hits: %d\tHit Rate: %.2f%%%s", hit, (double) hit / ((double) (hit + miss)) * 100,"\n---------------------------\n");
     }
 }

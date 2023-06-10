@@ -29,8 +29,7 @@ public class Cache7 {//4KB, direct mapped, 1-word blocks
     public void getInfo() {
         System.out.println("Cache #7");
         System.out.println("Cache size: 4096B\tAssociativity: 1\tBlock size: 1");
-        System.out.printf("Hits: %d\tHit Rate: %.2f%%", hit, (double) hit / ((double) (hit + miss)) * 100);
-        System.out.println("\n---------------------------");
+        System.out.printf("Hits: %d\tHit Rate: %.2f%%%s", hit, (double) hit / ((double) (hit + miss)) * 100,"\n---------------------------\n");
     }
 }
 
